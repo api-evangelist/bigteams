@@ -1,23 +1,92 @@
 aid: bigteams
+
 name: BigTeams
-description: 'BigTeams is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.bigteams.com/wp-content/uploads/2023/12/BigTeams-baseball-stadium_v2b.jpg
+
+description: BigTeams provides athletic scheduling and team management software for high schools and colleges in the United States and Canada.
+  Founded in 2001, the platform helps athletic directors, coaches, and administrators streamline event scheduling, roster management, eligibility
+  compliance, and communication with athletes and parents. Over 55 years of experience have made BigTeams a leading digital solution in K‑12 athletics,
+  serving thousands of schools across more than 40 states.
+
 url: https://raw.githubusercontent.com/api-evangelist/bigteams/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Athletic Software
+- K-12
+- Scheduling
+- Team Management
+- USA
+- Canada
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bigteams-hosts.yml
+- type: Login
+  url: https://www.bigteams.com/topics/log-in/
+- type: Blog
+  url: https://www.bigteams.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/BigTeams
+- type: DomainSecurity
+  url: security/bigteams-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.bigteams.com
+- type: PrivacyPolicy
+  url: https://www.bigteams.com/big-teams-privacy-policy/
+- type: TermsOfService
+  url: https://www.bigteams.com/terms-conditions-big-teams/
+
+apis:
+- name: BigTeams API
+  description: API for BigTeams athletic scheduling platform
+  humanURL: https://www.bigteams.com
+  baseURL: null
+  properties: []
+  x-coverage:
+    state: unreadable
+    reason: no-machine-readable-spec
+    detail: OpenAPI spec endpoints returned 504 or 404 and no documentation page was found
+    evidence:
+    - url: https://api.bigteams.com/openapi.json
+      status: 504
+    - url: https://www.bigteams.com/openapi.json
+      status: 404
+    checked: '2026-09-28'
+  aid: bigteams:bigteams-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-09-28'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://www.nasdaqprivatemarket.com/
+    status: 200
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

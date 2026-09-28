@@ -1,0 +1,20 @@
+generated: '2026-09-28'
+method: probed
+source: "https://www.bigteams.com/big-teams-privacy-policy/"
+signals:
+  data_retention:
+    evidence:
+      - source: "https://www.bigteams.com/big-teams-privacy-policy/"
+        http_status: 200
+        fetched: "/tmp/bigteams_privacy.html"
+        quote: "As long as the account is in good standing (payment received for subscription), BigTeams will retain event data for a minimum of 10 years. Once payment is forfeited, BigTeams is no longer required to retain any event data."
+        section: "Data Retention"
+    note: "Specifies minimum retention period of 10 years for event data while account is active."
+  data_subject_request:
+    evidence:
+      - source: "https://www.bigteams.com/big-teams-privacy-policy/"
+        http_status: 200
+        fetched: "/tmp/bigteams_privacy.html"
+        quote: "You are, as data-owner and user of the Services and Websites, entitled to (i) access your Personal Data and be informed about the way in which your information is treated, (ii) rectify your personal data in case it is not up-to-date, it is inaccurate or incomplete, (iii) ask for your data to be removed if you consider that it is not used in accordance with the applicable principles, duties and obligations, and (iv) object to the processing of your Personal Data for specific purposes."
+        section: "Personal Rights"
+    note: "Describes rights to access, rectify, delete, and object to processing, fulfilling data subject request obligations."
